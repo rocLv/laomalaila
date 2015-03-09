@@ -1,0 +1,30 @@
+div class='#{style_by_statu(order)}'
+  .panel-heading
+    = link_to "订单编号:#{order.serial_id}", travel_order_path(order)
+    span.pull-right
+      | 订单状态: #{order.statu}
+  .panel-body
+    .dl-horizontal.col-sm-6
+      dt 出发时间
+      dd #{l order.estimate_departure_time, format: :long}
+      dt 出发地点
+      dd #{order.from}
+      dt 首选交通工具
+      dd #{order.transport}
+      dt 是否接车/机
+      dd #{order.pickup}
+      dt 手机
+      dd #{order.phone}
+    .dl-horizontal.col-sm-6
+      dt 预计到达时间
+      dd #{l order.estimate_arrive_time, format: :long}
+      dt 目的地点
+      dd #{order.to}
+      dt 入住酒店价格
+      dd #{order.hotel_price_tier}
+      dt Email
+      dd #{order.email}
+      dt 发票邮寄地址
+      dd #{order.tax_delivery_address}
+  .panel-footer.text-right
+    = link_to '订单详情', travel_order_path(order)

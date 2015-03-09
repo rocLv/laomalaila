@@ -1,0 +1,28 @@
+// Place all the styles related to the Orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#step-2, #step-3, #step-4, #step-5, #step-6, #step-7 {
+  display: none;
+}
+
+#step-2, #step-3, #step-4 {
+  img {
+    width:  140px;
+    height: 140px;
+  }
+}
+
+.travel_order_budget {
+  height: 150px;
+  span { font-size: 120px; }
+  input {
+    height: 140px;
+    font-size: 120px;
+  }
+}
+
+.note {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+}

@@ -1,0 +1,45 @@
+
+p.well
+  | 您计划于<label class='label label-warning'> #{l @travel_order.estimate_departure_time, format: :long}
+    </label>从<label class='label label-info'>#{@travel_order.from}</label>出发,
+    希望能在<label class='label label-warning'>#{l @travel_order.estimate_arrive_time, format: :long}</label>前抵达<label class='label label-info'>#{@travel_order.to}</label>.
+
+p.well
+  | 您选择了<label class='label label-info'>#{@travel_order.transport}</label>作为您本次旅行的主要交通工具.
+
+p.well
+  | 您选择了价格区间在<label class='label label-warning'>#{@travel_order.hotel_price_tier}</label>的酒店.
+
+p.well
+  | 您<label class='label label-info'>#{@travel_order.pickup}</label>
+
+h4.well
+  | 您本次旅行的预算为<label class='label label-danger'>#{number_to_currency(@travel_order.budget)}</label>元.
+.bs-callout.bs-callout-info
+  h5
+    | 我们的工作人员会使用以下联系方式和您联系
+  dl.dl-horizontal
+    dt 手机号码
+    dd <tel>#{@travel_order.phone}</tel>
+    dt Email
+    dd =  mail_to @travel_order.email
+    dt 发票邮寄地址
+    dd #{@travel_order.tax_delivery_address}
+    dt 传真号码
+    dd #{@travel_order.fax}
+
+.bs-callout.bs-callout-warning
+  h5
+    | 您的紧急联系人
+  dl.dl-horizontal
+    dt
+      | <span><b>#{@travel_order.emergency_contact_name}:</b></span>
+    dd <span>#{@travel_order.emergency_contact_phone}</span>
+
+- if @travel_order.modifiable?
+  .col-xs-6.col-sm-4.col-sm-offset-2
+    = button_to '我需要修改', edit_travel_order_path(@travel_order), class: 'btn btn-info', name: 'modify'
+  .col-xs-6.col-sm-4.col-sm-offset-2
+    = simple_form_for @travel_order, method: :patch do |f|
+      = f.hidden_field :status, value: 1
+      = f.button :submit, '确认并提交订单', class: 'btn btn-success', name: 'confirm'

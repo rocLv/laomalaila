@@ -1,0 +1,13 @@
+
+#travel_order_edit.container
+  - if @travel_order.modifiable?
+    .bs-callout.bs-callout-danger
+      h4.text-danger
+        | 请再次确认您的订单，一旦提交之后，如需修改，请及时与我们的工作人员联系。
+      p
+        | 我们的工作人员会根据您的订单，为您制定详细的的行程计划。默认情况下，我们会为您选择出行便利，性价比最高的方案。一旦您提交订单，如需要修改，请用站内短信或者致电010-12345678及时与我们的工作人员联系。
+  - else
+    br
+
+  = render 'table'
+

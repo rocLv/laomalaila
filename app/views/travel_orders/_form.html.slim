@@ -1,0 +1,147 @@
+  = simple_form_for @travel_order do |f|
+    #step-1.display
+      h4.well.text-success
+        | 请告诉我们您本次旅行的基本信息
+      .row
+        .col-xs-12.col-sm-6
+          = f.input :estimate_departure_time, as: :string, label:'预计出发时间'
+        .col-xs-12.col-sm-6
+          = f.input :estimate_arrive_time, as: :string, label: '预计到达时间'
+      .row
+        .col-xs-12.col-sm-6
+          = f.input :from, label: '出发地的详细地址'
+        .col-xs-12.col-sm-6
+          = f.input :to, label: '目的地的详细地址'
+
+    #step-2
+      h4.well.text-success
+        | 请选择您本次旅行的主要交通方式
+      .row
+        .col-xs-6.col-sm-3
+          = image_tag('bus.jpg', class: 'img-responsive img-thumbnail')
+          h2
+            = f.label '长途巴士'
+          .radio
+            label
+              = f.radio_button :transports, 'bus_business'
+              | 商务直达
+          .radio
+            label
+              = f.radio_button :transports, 'bus_direct'
+              | 直达快班
+        .col-xs-6.col-sm-3
+          = image_tag('train.jpg', class: 'img-responsive img-thumbnail')
+          h2
+            = f.label '火车'
+          .radio
+            label
+              = f.radio_button :transports, 'train_up'
+              | 上铺
+          .radio
+            label
+              = f.radio_button :transports, 'train_mid'
+              | 中铺
+          .radio
+            label
+              = f.radio_button :transports, 'train_low'
+              | 下铺
+
+        .col-xs-6.col-sm-3
+          = image_tag('gaotie.png', class: 'img-responsive img-thumbnail')
+          h2
+            = f.label '高铁'
+          .radio
+            label
+              = f.radio_button :transports, 'railway_1'
+              | 一等座
+          .radio
+            label
+              = f.radio_button :transports, 'railway_2'
+              | 二等座
+        .col-xs-6.col-sm-3
+          = image_tag('plane.png', class: 'img-responsive img-thumbnail')
+          h2
+            = f.label '飞机'
+          .radio
+            label
+              = f.radio_button :transports, 'plane_first'
+              | 头等舱
+          .radio
+            label
+              = f.radio_button :transports, 'plane_business'
+              | 公务舱
+          .radio
+            label
+              = f.radio_button :transports, 'plane_economic'
+              | 经济舱
+    #step-3
+      h4.well.text-success
+        | 请选择入住酒店的规格
+      .row
+        .col-xs-12.col-sm-3
+          = image_tag 'hotel0.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '150-200元', class: 'note'
+          = f.radio_button :hotel_ranks, 'between_150_200'
+        .col-xs-12.col-sm-3
+          = image_tag 'hotel1.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '201-300元', class: 'note'
+          = f.radio_button :hotel_ranks, 'between_200_300'
+        .col-xs-12.col-sm-3
+          = image_tag 'hotel2.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '301-400元', class: 'note'
+          = f.radio_button :hotel_ranks, 'between_300_400'
+        .col-xs-12.col-sm-3
+          = image_tag 'hotel3.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '> 400元', class: 'note'
+          = f.radio_button :hotel_ranks, 'above_400'
+    #step-4
+      h4.well.text-success
+        | 请选择接车或接机方式
+      .row
+        .col-xs-12.col-sm-4
+          = image_tag 'subway.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '自行安排', class: 'note'
+          = f.radio_button :pick_ups, 'free'
+        .col-xs-12.col-sm-4
+          = image_tag 'taxi.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '出租车', class: 'note'
+          = f.radio_button :pick_ups, 'taxi'
+        .col-xs-12.col-sm-4
+          = image_tag 'car.jpg', class: 'img-responsive img-thumbnail'
+          = f.label '专车', class: 'note'
+          = f.radio_button :pick_ups, 'special'
+
+    #step-5
+      .row
+        h4.well.text-success
+            | 请输入您的预算(单位:元)
+        .col-xs-12.col-sm-12
+          .form-group.string.travel_order_budget
+            .input-group
+              span.input-group-addon ￥
+              = f.input_field :budget, class: 'string form-control'
+    #step-6
+      h4.well.text-success
+        | 请填入您的联系方式(空白则表示使用账户信息)
+      .row
+        .col-xs-12.col-sm-6
+          = f.input :phone, label: '手机号码'
+          = f.input :tax_delivery_address, label: '发票邮寄地址'
+        .col-xs-12.col-sm-6
+          = f.input :email, value: "#{current_user.email}"
+          = f.input :fax, label: '传真'
+    #step-7
+      h4.well.text-danger
+        | 请输入您的紧急联系人信息:
+      .row
+        .col-xs-12.col-sm-6
+          = f.input :emergency_contact_name, label: '真实姓名'
+        .col-xs-12.col-sm-6
+          = f.input :emergency_contact_phone, label: '联系电话'
+    nav
+      ul.pager
+        li.previous
+          a href='#' 上一页
+        li.next
+          a href='#' 下一页
+

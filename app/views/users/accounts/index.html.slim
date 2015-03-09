@@ -1,0 +1,26 @@
+br
+#user_account.container
+  .col-xs-12.col-sm-8.col-sm-offset-2
+    h3.text-center
+      | #{current_user.name}的账户信息
+    hr
+    .row
+      .col-xs-12.col-sm-5
+        = image_tag(current_user.avatar.url, size: "240")
+      .col-xs-12.col-sm-7
+        .dl-horizontal
+          dt 手机
+          dd = current_user.mobile
+          dt 电话
+          dd = current_user.phone
+          dt Email
+          dd = current_user.email
+          dt 传真
+          dd = current_user.fax
+          dt 地址
+          dd = current_user.address
+          dt 最后一次登陆时间
+          dd = l current_user.last_sign_in_at, format: :long
+        .col-xs-12.col-sm-4.col-sm-offset-4
+          button.btn.btn-primary
+            = link_to '修改账户设置', edit_user_registration_path

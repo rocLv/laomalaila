@@ -1,0 +1,8 @@
+div.navbar-collapse.collapse id='navbar'
+  = simple_form_for(@user, url: session_path(@user)) do |f|
+    .form-group
+      = f.input_field :email, class: 'form-control'
+    .form-group
+      = f.input_field :password, class: 'form-control'
+    button.btn.btn-success 登陆
+

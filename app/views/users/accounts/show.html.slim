@@ -1,0 +1,8 @@
+br
+#account_show.col-xs-12.col-sm-10.col-sm-offset-1
+  - if @travel_orders
+    - @travel_orders.each do |order|
+      = render 'detail', order: order
+  - else
+    .alert.alert-danger
+      | 您目前还没有任何订单.<br>
