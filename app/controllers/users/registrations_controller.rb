@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    sign_up_params[:name].downcase!
     super
 
     if @user.save

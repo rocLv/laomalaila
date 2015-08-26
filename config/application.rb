@@ -27,6 +27,6 @@ module Mishu
     # Set up Alipay API PID and KEY
     Alipay.pid = '2088002340337660'
     Alipay.key = '56l3ex2jxdg8tczu0guthhyjix91x85r'
-    Alipay.seller_email = 'roc_war@yahoo.com.cn'
+    # Alipay.seller_email = 'roc_war@yahoo.com.cn'
   end
 end
