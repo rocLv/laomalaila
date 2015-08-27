@@ -32,6 +32,9 @@ gem 'alipay'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem 'carrierwave'
 
+# Fix tutbolinks break down jquery binding
+gem 'jquery-turbolinks'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

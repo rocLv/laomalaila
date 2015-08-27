@@ -4,7 +4,7 @@
         | 请告诉我们您本次旅行的基本信息
       .row
         .col-xs-12.col-sm-6
-          = f.input :estimate_departure_time, as: :string, label:'预计出发时间'
+          = f.input :estimate_departure_time, as: :date, label:'预计出发时间'
         .col-xs-12.col-sm-6
           = f.input :estimate_arrive_time, as: :string, label: '预计到达时间'
       .row

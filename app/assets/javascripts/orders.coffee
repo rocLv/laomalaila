@@ -23,3 +23,4 @@ jQuery ->
 
     if step == 7
       $('.next').html('<button name="preview" class="btn btn-success pull-right" type="submit">预览</button>')
+
