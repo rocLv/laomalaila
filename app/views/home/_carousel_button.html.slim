@@ -1,0 +1,7 @@
+p
+  - if current_user
+    = link_to('马上订购', new_travel_order_path,
+      class: 'btn btn-lg btn-primary')
+  - else
+    = link_to('立即注册', new_user_registration_path,
+     class: 'btn btn-lg btn-primary') unless current_user
