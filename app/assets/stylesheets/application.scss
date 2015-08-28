@@ -12,7 +12,8 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "bootstrap-datepicker3";
+
+@import 'bootstrap-datetimepicker';
 @import 'base';
 @import 'home';
 @import 'orders';

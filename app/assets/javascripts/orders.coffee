@@ -24,9 +24,15 @@ jQuery ->
     if step == 7
       $('.next').html('<button name="preview" class="btn btn-success pull-right" type="submit">预览</button>')
 
-  $('#travel_order_estimate_departure_time, #travel_order_estimate_arrive_time').datepicker
-    startDate: 'today'
-    todayHighlight: true
-    autoclose: true
-    language: 'zh-CN'
+  $('#travel_order_estimate_departure_time').datetimepicker()
+  
+  $('#travel_order_estimate_arrive_time').datetimepicker useCurrent: false //Important!
+  
+  $('#travel_order_estimate_departure_time').on 'db.change', ->(e)
+    $('#travel_order_estimate_arrive_time').data('DateTimePicker').minDate(e.date)
+    
+  $('#travel_order_estimate_arrive_time').on 'db.change', ->(e)
+    $('#travel_order_estimate_departure_time').data('DateTimePicker').maxDate(e.date)
+    return
+    
 
