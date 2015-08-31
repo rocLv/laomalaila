@@ -24,15 +24,14 @@ jQuery ->
     if step == 7
       $('.next').html('<button name="preview" class="btn btn-success pull-right" type="submit">预览</button>')
 
-  $('#travel_order_estimate_departure_time').datetimepicker()
-  
-  $('#travel_order_estimate_arrive_time').datetimepicker useCurrent: false //Important!
-  
-  $('#travel_order_estimate_departure_time').on 'db.change', ->(e)
-    $('#travel_order_estimate_arrive_time').data('DateTimePicker').minDate(e.date)
-    
-  $('#travel_order_estimate_arrive_time').on 'db.change', ->(e)
-    $('#travel_order_estimate_departure_time').data('DateTimePicker').maxDate(e.date)
-    return
-    
+  $('#travel_order_estimate_departure_time').datetimepicker
+    format: 'YYYY-MM-DD HH:mm'
+  $('#travel_order_estimate_arrive_time').datetimepicker
+    useCurrent: false #Important! See issue #1075
+    format: 'YYYY-MM-DD HH:mm'
 
+  $('#travel_order_estimate_departure_time').on 'dp.change', (e) ->
+    $('#travel_order_estimate_arrive_time').data('DateTimePicker').minDate(e.date)
+
+  $('#travel_order_estimate_arrive_time').on 'db.change', (e) ->
+    $('#travel_order_estimate_departure_time').data('DateTimePicker').maxDate(e.date)

@@ -14,7 +14,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require moment/<locale>
+//= require moment
+//= require moment/zh-cn
 //= require bootstrap-datetimepicker
 //= require_tree .
 //= require turbolinks
