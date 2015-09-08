@@ -17,6 +17,8 @@
         = f.input :phone,   label:'电话'
         = f.input :fax,     label:'传真'
         = f.input :address, label:'发票邮寄地址'
+        = f.label '个人头像'
         = f.file_field :avatar, multitype: true
+        = f.hidden_field :avatar_cache
       .form-actions.center
         = f.button :submit, "注册", class: 'btn btn-success'

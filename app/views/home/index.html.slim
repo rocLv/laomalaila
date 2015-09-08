@@ -9,21 +9,19 @@
           .container
             .carousel-caption
               h1
-                | 无论您是回家、旅游，还是出差
+                | 无论您是回家、旅游、还是出差
               p
-                | 我们的服务将会在整个旅行期间如影随行，我们的叮咛一如母亲的唠叨，喋喋不休
-              p
-                = link_to('立即注册', new_user_registration_path, class: 'btn btn-lg btn-primary')
+                | 我们是您24小时随行的小秘书！<br>您只需要告诉我们您的行程安排，接下来将有专人会根据您的行程安排，为您预订机票、火车票、汽车票、专车或出租车以及酒店等服务。一旦在您旅行过程中出现任何问题，您都可以及时和我们联系，我们将会竭尽全力为您服务。
+              = render 'carousel_button'
         .item
           = image_tag('2.jpg')
           .container
             .carousel-caption
               h1
-                | 我们为您提供最热忱的服务
+                | 专为白领订制！
               p
-                | 您只需要告诉我们您的出发时间和地点，以及目的地，以及您本次旅程的预算，我们将根据您的预算和计划，为您安排性价比最高的旅行
-              p
-                = link_to('立即注册', new_user_registration_path, class: 'btn btn-lg btn-primary')
+                | 我们知道您旅途劳累，我们知道您工作辛苦！所以我们愿意为您提供力所能及的服务--为您预订机票、酒店等，当您到了目的地后，会有我们为您联系的专车、出租车在出站口等您，让您不再排队等车，享受明星般的服务。
+              = render 'carousel_button'
         .item
           = image_tag('3.jpg')
           .container
@@ -31,11 +29,11 @@
               h1
                 | One more thing...（套用乔老爷子的话）
               p
-                code  对于经济型和标准型用户，我们竟然不收费！<br>
-                |
+                code 重要的事情说三遍：我们不收费！不收费！不收费！
+                | <br>
                   我们通过和酒店、订票服务提供商、租车公司等深度合作，利用集团采购优势，降低各方面的费用。我们为您节约每一分钱！
-              p
-                = link_to('立即注册', new_user_registration_path, class: 'btn btn-lg btn-primary')
+              = render 'carousel_button'
+
       a.left.carousel-control[href="index.html#myCarousel" role="button" data-slide="prev"]
         span.glyphicon.glyphicon-chevron-left[aria-hidden="true"]
         span.sr-only
@@ -54,7 +52,7 @@
             |
               选择<b>火车、高铁和大巴</b>出行，住<b>经济连锁酒店</b>，选乘<b>出租车或公交、地铁</b>，我们为您安排从出发地至目的地的全程人工导航，让您无忧出行。
           p
-            = link_to '马上订购 >>', "#{new_travel_order_path}?type=0", class: 'btn btn-success'
+            = link_to '马上订购 >>', "#{new_travel_order_path}", class: 'btn btn-success'
         .col-md-4
           = image_tag('plane.png')
           h2
@@ -63,7 +61,7 @@
             |
               选择<b>飞机</b>作为主要的交通工具，入住<b>三星级及以上酒店</b>，选乘<b>出租车</b>或者<b>租车</b>方式接驳。我们为您<b>全程</b>安排<b>出租车</b>或依据您的标准为您租适合价位的汽车，让您有回家的感觉。
           p
-            = link_to '马上订购>>', "#{new_travel_order_path}?type=1", class: 'btn btn-success'
+            = link_to '马上订购>>', "#{new_travel_order_path}", class: 'btn btn-success'
         .col-md-4
           = image_tag('bieshu.png')
           h2
@@ -72,7 +70,7 @@
             |
               选择<b>飞机公务舱</b>或<b>头等舱</b>以上级别出行，入住<b>五星级酒店</b>，由我们为您安排专车接送。我们也可以为您提供安排会议等服务，做您的随身小秘书。
           p
-            = link_to '马上订购>>', "#{new_travel_order_path}?type=2", class: 'btn btn-success'
+            = link_to '马上订购>>', "#{new_travel_order_path}", class: 'btn btn-success'
       hr.featurette-divider
       .row.featurette
         .col-md-7

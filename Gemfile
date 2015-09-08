@@ -1,4 +1,4 @@
-source 'http://ruby.taobao.org'
+source 'https://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -31,6 +31,12 @@ gem 'slim-rails'
 gem 'alipay'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem 'carrierwave'
+
+# Fix tutbolinks break down jquery binding
+gem 'jquery-turbolinks'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

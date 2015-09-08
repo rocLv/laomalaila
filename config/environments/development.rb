@@ -42,11 +42,11 @@ Rails.application.configure do
   # user gmail send mail
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'smtp.qq.com',
     port:                 587,
     domain:               'laomalaila.com',
-    user_name:            'wangqsh999',
-    password:             'wangqiang',
+    user_name:            '2794712310',
+    password:             ENV["QQ_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true
   }

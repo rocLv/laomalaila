@@ -1,7 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
-  after_action :send_welcome_email, only: [:create]
 
   # GET /resource/sign_up
   # def new
@@ -10,10 +9,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    sign_up_params[:name].downcase!
     super
 
     if @user.save
       flash[:notice] = "#{@user.name}创建成功。"
+      send_welcome_email
     end
   end
 
