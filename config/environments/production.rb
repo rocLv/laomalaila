@@ -82,7 +82,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.qq.com',
     port:                 587,
-    domain:               'laomalaila',
+    domain:               'laomalaila.com',
     user_name:            '2794712310',
     password:             ENV['QQ_PASSWORD'],
     authentication:       'plain',
