@@ -14,7 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     if @user.save
       flash[:notice] = "#{@user.name}创建成功。"
-      send_welcome_email
+      # temporarily stop to send welcome email
+      # send_welcome_email
     end
   end
 
