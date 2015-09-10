@@ -1,0 +1,5 @@
+.container
+  h1.text-center  新建飞机信息
+  = simple_nested_form_for [:admin, @air] do |f|
+    = render 'admin/shared/transport_field', f: f
+    = f.submit '提交'

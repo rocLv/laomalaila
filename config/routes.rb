@@ -1,9 +1,134 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
-  resources :travel_orders do
-    resources :trips
+  namespace :admin do
+  get 'cars/index'
   end
+
+  namespace :admin do
+  get 'cars/new'
+  end
+
+  namespace :admin do
+  get 'cars/create'
+  end
+
+  namespace :admin do
+  get 'cars/update'
+  end
+
+  namespace :admin do
+  get 'cars/edit'
+  end
+
+  namespace :admin do
+  get 'cars/show'
+  end
+
+  namespace :admin do
+  get 'airs/index'
+  end
+
+  namespace :admin do
+  get 'airs/new'
+  end
+
+  namespace :admin do
+  get 'airs/create'
+  end
+
+  namespace :admin do
+  get 'airs/update'
+  end
+
+  namespace :admin do
+  get 'airs/edit'
+  end
+
+  namespace :admin do
+  get 'airs/show'
+  end
+
+  namespace :admin do
+  get 'buses/index'
+  end
+
+  namespace :admin do
+  get 'buses/new'
+  end
+
+  namespace :admin do
+  get 'buses/create'
+  end
+
+  namespace :admin do
+  get 'buses/update'
+  end
+
+  namespace :admin do
+  get 'buses/edit'
+  end
+
+  namespace :admin do
+  get 'buses/show'
+  end
+
+  namespace :admin do
+  get 'trains/index'
+  end
+
+  namespace :admin do
+  get 'trains/new'
+  end
+
+  namespace :admin do
+  get 'trains/create'
+  end
+
+  namespace :admin do
+  get 'trains/update'
+  end
+
+  namespace :admin do
+  get 'trains/edit'
+  end
+
+  namespace :admin do
+  get 'trains/show'
+  end
+
+  namespace :admin do
+  get 'hotels/index'
+  end
+
+  namespace :admin do
+  get 'hotels/new'
+  end
+
+  namespace :admin do
+  get 'hotels/create'
+  end
+
+  namespace :admin do
+  get 'hotels/update'
+  end
+
+  namespace :admin do
+  get 'hotels/edit'
+  end
+
+  namespace :admin do
+  get 'hotels/show'
+  end
+
+  root 'home#index'
+
+  namespace :admin do
+    resources :travel_orders
+    resources :hotels, :airs, :trains, :buses, :cars
+    resources :rooms, :air_prices, :train_prices, :bus_prices, :car_prices
+  end
+
+  resources :travel_orders
 
   get 'alipay_notify', to: 'travel_orders#alipay_notify'
   namespace :users do

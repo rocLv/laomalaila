@@ -1,0 +1,23 @@
+.row
+  .col-xs-12.col-sm-6
+    = trip_field.input :departure_time, as: :string, label: '请选择出发时间',
+      placeholder: '201503151459'
+  .col-xs-12.col-sm-6
+    = trip_field.input :arrive_time, as: :string, label: '请选择到达时间',
+      placeholder: '201503160803'
+.row
+  .col-xs-12.col-sm-6
+    = trip_field.input :from_location, label: '请输入出发地点'
+  .col-xs-12.col-sm-6
+    = trip_field.input :to_location, label: '请输入到达地点'
+.row
+  .col-xs-12.col-sm-6
+    = trip_field.input transport_field(@travel_order), as: :string,
+      label: '请输入交通信息'
+  .col-xs-12.col-sm-6
+    = trip_field.input :room_price_id, as: :string, label: '请输入酒店信息'
+.row.form-inline
+  .col-xs-12.col-sm-8
+    = trip_field.input :car_price_id, as: :string, label: '请输入接车信息:'
+  .col-xs-12.col-sm-4
+    = trip_field.link_to_remove '删除本段', class: 'btn btn-danger'

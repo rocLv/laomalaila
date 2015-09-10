@@ -1,0 +1,19 @@
+.row
+  .col-xs-12.col-sm-5
+    = room_field.input :kind, label: '房间种类'
+  .col-xs-12.col-sm-5
+    = room_field.input :people, label: '所住人数'
+  .col-xs-12.col-sm-2
+    = room_field.label '带电脑?'
+    = room_field.check_box :pc
+.row
+  .col-xs-12.col-sm-4
+    = room_field.input :price, label: '原价'
+  .col-xs-12.col-sm-4
+    = room_field.input :charge, label: '现价'
+  .col-xs-12.col-sm-4
+    = room_field.input :discount, label: '折扣'
+.row
+  = room_field.link_to_remove '删除房间',
+    class: 'btn btn-danger pull-right'
+

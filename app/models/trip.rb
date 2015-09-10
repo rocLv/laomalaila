@@ -1,3 +1,10 @@
 class Trip < ActiveRecord::Base
-  enum ways: %w[bus train high_speed_railway air]
+  belongs_to :travel_order
+
+  has_many   :bus_prices
+  has_many   :train_prices
+  has_many   :air_prices
+  has_many   :car_prices
+
+  enum way: %w[bus train high_speed_railway air]
 end
