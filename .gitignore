@@ -21,3 +21,9 @@
 
 # Ignore all cache files
 /public/assets/*
+
+# Ignore private files
+/config/application.rb
+/config/database.yml
+/config/secrets.yml
+/config/envionments/production.rb
