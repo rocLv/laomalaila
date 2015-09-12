@@ -4,7 +4,7 @@ default: &default
   port: 5432
   encoding: unicode
   username: postgres
-  password: 3e4r5t6y
+  password: password
   
   timeout: 5000
 
