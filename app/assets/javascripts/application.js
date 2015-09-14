@@ -18,6 +18,6 @@
 //= require moment/zh-cn
 //= require bootstrap-datetimepicker
 //= require jquery_nested_form
+//= require baidutongji
 //= require_tree .
 //= require turbolinks
-//= require baidutongji
