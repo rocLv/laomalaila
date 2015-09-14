@@ -20,14 +20,31 @@
   border-radius: 3px;
 }
 
-.bs-callout-danger {
-  border-left-color: #ce4844;
+.bs-callout-primary {
+  border-left-color: $brand_primary;
+}
+
+.bs-callout-success {
+  border-left-color: $brand_success;
 }
 
 .bs-callout-info {
-  border-left-color: #1b809e;
+  border-left-color: $brand_info;
 }
 
 .bs-callout-warning {
-  border-left-color: #aa6708;
+  border-left-color: $brand_warning;
 }
+
+.bs-callout-danger {
+  border-left-color: $brand_danger;
+}
+
+.field-btn {
+  @extend .btn;
+  @extend .btn-xs;
+  @extend .btn-block;
+
+  margin-top: -30px;
+}
+

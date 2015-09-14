@@ -1,0 +1,18 @@
+.container
+  .col-xs-12.col-sm-10.col-sm-offset-1
+    table.table
+      - @travel_orders.each do |order|
+        tr
+          td = link_to User.find(order.user_id).name, users_profile_path
+          td = link_to order.serial_id, travel_order_path(order)
+          td = l order.estimate_departure_time, format: :long
+          td = order.from
+          td = l order.estimate_arrive_time, format: :long
+          td = order.to
+          td = order.budget
+          td
+            - if order.submitted?
+              = link_to '制定行程',
+                "#{new_admin_travel_order_path}?id=#{order.id}"
+            - else #{order.state}
+

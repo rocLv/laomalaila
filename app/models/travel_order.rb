@@ -1,4 +1,6 @@
 class TravelOrder < ActiveRecord::Base
+  has_many :trips
+
   # !DO NOT MODIFY enum VALUE
   enum status: [:modifiable, :submitted, :confirmed, :planned, :paid,
     :finished, :failed]
@@ -20,6 +22,8 @@ class TravelOrder < ActiveRecord::Base
   validates :email, format: {
     with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
     on: :create }
+
+  accepts_nested_attributes_for :trips
 
   scope :modifiable, -> { where('status = ?', statuses[:modifiable]) }
   scope :submitted,  -> { where('status = ?', statuses[:submitted]) }

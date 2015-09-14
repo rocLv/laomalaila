@@ -1,0 +1,19 @@
+
+.col-xs-12.col-sm-8.col-sm-offset-2
+  h2 为#{User.find(@travel_order.user_id).name}制定行程:
+
+  = render 'shared/travel_order_detail', order: @travel_order
+
+  = simple_nested_form_for @travel_order do |f|
+    = f.input :status, as: :hidden
+    = f.simple_fields_for :trips do |trip_field|
+     .bs-callout.bs-callout-info
+       = render 'trip_fields', trip_field: trip_field
+    .row
+      .col-xs-12
+        = f.link_to_add '继续添加', :trips, style: 'margin-top: -30px',
+          class: 'btn btn-xs btn-block btn-success'
+
+    .row
+      .col-xs-12
+        = f.submit '提交', class: 'btn btn-primary btn-block'

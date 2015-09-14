@@ -1,0 +1,17 @@
+.container
+  h2.text-center 新建酒店信息
+  .row
+    .col-xs-12.col-sm-8.col-sm-offset-2
+      = simple_nested_form_for [:admin, @hotel] do |f|
+        = f.input :name, label: '酒店名称'
+        = f.input :rank, label: '酒店星级'
+        = f.input :phone, label: '电话'
+        = f.input :address, label: '地址'
+          h4 添加房间信息
+          = f.simple_fields_for :rooms do |room_field|
+            .bs-callout.bs-callout-warning
+              = render 'room_field', room_field: room_field
+        = f.link_to_add '添加新房间种类', :rooms, style: 'margin-top: -30px;',
+          class: 'field-btn btn-success'
+        br
+        = f.submit '新建酒店', class: 'btn btn-primary btn-block'
