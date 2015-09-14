@@ -1,3 +1,12 @@
+[![Code
+Climate](https://codeclimate.com/github/rocLv/laomalaila/badges/gpa.svg)](https://codeclimate.com/github/rocLv/laomalaila)
+
+[![Test
+Coverage](https://codeclimate.com/github/rocLv/laomalaila/badges/coverage.svg)](https://codeclimate.com/github/rocLv/laomalaila/coverage)
+
+[![Build
+Status](https://travis-ci.org/rocLv/laomalaila.svg)](https://travis-ci.org/rocLv/laomalaila)
+
 Install:
 ```terminal
 cp config/application.rb.sample config/application.rb
