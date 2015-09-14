@@ -67,7 +67,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private
  
-  def send_welcome_email
-    UserMailer.welcome_email(@user).deliver_later
-  end
+ # def send_welcome_email
+ #   UserMailer.welcome_email(@user).deliver_later
+ # end
 end
