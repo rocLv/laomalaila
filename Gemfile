@@ -15,6 +15,9 @@ gem 'coffee-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-turbolinks'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -32,10 +35,6 @@ gem 'slim-rails'
 gem 'alipay'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem 'carrierwave'
-
-# Fix tutbolinks break down jquery binding
-gem 'jquery-turbolinks'
-
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
 gem 'nested_form'

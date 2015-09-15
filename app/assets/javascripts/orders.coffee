@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
+$(document).ready ->
   step = 1
   $('.previous').click (e) ->
     # 求的当前step id
@@ -35,3 +35,5 @@ jQuery ->
 
   $('#travel_order_estimate_arrive_time').on 'db.change', (e) ->
     $('#travel_order_estimate_departure_time').data('DateTimePicker').maxDate(e.date)
+
+  return
