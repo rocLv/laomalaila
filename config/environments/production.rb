@@ -82,11 +82,11 @@ Rails.application.configure do
   # use qq domail mail send mail
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.ym.163.com',
+    address:              'smtp.example.com',
     port:                 587,
     domain:               'laomalaila.com',
-    user_name:            'admin',
-    password:             ENV['EMAIL_PASSWORD'],
+    user_name:            'username',
+    password:             ENV['PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true
   }
