@@ -19,7 +19,7 @@
 
 role :app, %w{deploy@laomalaila.com}
 role :web, %w{deploy@laomalaila.com}
-role :db,  %w{postgres@laomalaila.com}
+role :db,  %w{deploy@laomalaila.com}
 
 
 
