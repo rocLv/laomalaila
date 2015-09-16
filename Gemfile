@@ -66,3 +66,9 @@ group :development, :test do
   gem 'database_cleaner'
 end
 
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-rails'
+end
