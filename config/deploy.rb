@@ -1,5 +1,6 @@
 set :application, 'laomalaila'
 set :repo_url, 'git@github.com:rocLv/laomalaila.git'
+set :rvm_ruby_version, '2.2.3'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
