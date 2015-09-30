@@ -25,7 +25,7 @@ module Mishu
     config.active_record.raise_in_transactional_callbacks = true
 
     # Set up Alipay API PID and KEY
-    Alipay.pid = "#{ENV['ALIPAY_PID']}"
-    Alipay.key = "#{ENV['ALIPAY_KEY']}"
+    # Alipay.pid = "#{ENV['ALIPAY_PID']}"
+    # Alipay.key = "#{ENV['ALIPAY_KEY']}"
   end
 end
