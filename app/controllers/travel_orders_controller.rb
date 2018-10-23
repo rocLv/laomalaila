@@ -104,7 +104,7 @@ class TravelOrdersController < ApplicationController
   end
 
   def preview
-    if(params[:preview])
+    if (params[:preview])
       render :show
     end
   end

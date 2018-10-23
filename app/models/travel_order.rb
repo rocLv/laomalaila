@@ -6,7 +6,7 @@ class TravelOrder < ActiveRecord::Base
     :finished, :failed]
   enum types:  [:economic, :standard, :luxurious]
   enum transports: [:bus_business, :bus_direct, :train_up, :train_mid,
-    :train_low, :railway_1,:railway_2, :plane_first, :plane_business,
+    :train_low, :railway_1, :railway_2, :plane_first, :plane_business,
     :plane_economic]
   enum hotel_ranks: [:between_150_200, :between_200_300, :between_300_400,
     :above_400]
