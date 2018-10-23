@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, :type => :request do
-
   describe 'signs up' do
     it 'successfully' do
       visit new_user_registration_path

@@ -6,5 +6,4 @@ price 1.5
 people 1
 pc ""
   end
-
 end

@@ -12,11 +12,9 @@ class Admin::TravelOrdersController < ApplicationController
   end
 
   def create
-
   end
 
   def update
-
   end
 
   def show

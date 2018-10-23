@@ -9,5 +9,4 @@ city "MyString"
 distinct "MyString"
 road "MyString"
   end
-
 end

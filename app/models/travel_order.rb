@@ -94,5 +94,4 @@ class TravelOrder < ActiveRecord::Base
       false
     end
   end
-
 end

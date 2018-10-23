@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "TravelOrders", type: :request do
-
  describe "GET /travel_orders" do
-
    context "unauthorised user" do
      it 'redirect to login page' do
        get travel_orders_path

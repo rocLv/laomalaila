@@ -4,5 +4,4 @@ FactoryGirl.define do
 charge 1.5
 discount 1.5
   end
-
 end
