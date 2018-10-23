@@ -69,7 +69,7 @@ class TravelOrdersController < ApplicationController
       :quantity          => 1,
       :discount          => 0,
       :return_url        => users_profile_path,
-      :notify_url        => alipay_notify_path 
+      :notify_url        => alipay_notify_path
     }
 
     Alipay::Service.create_direct_pay_by_user_url(options)
