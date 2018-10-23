@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :mobile, presence: true
   validates :address, presence: true
 
-  enum roles: [ :normal, :vip, :admin ]
+  enum roles: [:normal, :vip, :admin]
 
   attr_accessor :login
 

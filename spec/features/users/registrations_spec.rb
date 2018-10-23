@@ -15,7 +15,7 @@ RSpec.describe User, :type => :request do
 
       click_button '注册'
 
-      instance_double(User,:send_welcome_email)
+      instance_double(User, :send_welcome_email)
       expect(page).to have_content('successfully')
     end
   end

@@ -1,3 +1,3 @@
 class Train < ActiveRecord::Base
-  has_many   :train_prices
+  has_many :train_prices
 end
