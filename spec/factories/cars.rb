@@ -7,5 +7,4 @@ rank 1
 unit 1.5
 starting_price 1.5
   end
-
 end

@@ -24,5 +24,4 @@ class Users::AccountsController < ApplicationController
   def user_params
     params.require(:user).permit(:id)
   end
-
 end

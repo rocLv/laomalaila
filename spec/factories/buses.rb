@@ -14,5 +14,4 @@ to_station_address "MyString"
 miles 1.5
 company "MyString"
   end
-
 end

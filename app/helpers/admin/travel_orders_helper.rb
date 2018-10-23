@@ -1,6 +1,5 @@
 module Admin::TravelOrdersHelper
   def transport_field(travel_order)
-
     case travel_order.transports.to_sym
     when :bus_business, :bus_direct
       :bus_price_id
@@ -35,5 +34,4 @@ module Admin::TravelOrdersHelper
       false
     end
   end
-
 end

@@ -5,5 +5,4 @@ address "MyString"
 phone "MyString"
 fax "MyString"
   end
-
 end
