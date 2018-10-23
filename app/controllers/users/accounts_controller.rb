@@ -4,7 +4,7 @@ class Users::AccountsController < ApplicationController
   ##
   # show user account's information
   # link to session, registration, etc
-  # 
+  #
   def index
   end
 
